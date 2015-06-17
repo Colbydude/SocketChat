@@ -75,7 +75,7 @@ public class MessageEvents implements Listener {
 	                public void run() {
 	                    for (WebSocket socket : SocketListener.activeSessions.keySet()) {
 	                        if (socket.isOpen()) {
-	                            socket.send(String.format("chat.receive=%s", formattedMessage.replaceAll("ยง", "&")));
+	                            socket.send(String.format("chat.receive=%s", formattedMessage.replaceAll("ง", "&")));
 	                        }
 	                    }
 	                }
@@ -116,7 +116,7 @@ public class MessageEvents implements Listener {
         if (print != null) {
 	        for (WebSocket socket : SocketListener.activeSessions.keySet()) {
 	            if (socket.isOpen()) {
-	            	socket.send(String.format("print.message=%s", print.replaceAll("ยง", "&")));
+	            	socket.send(String.format("print.message=%s", print.replaceAll("ง", "&")));
 	            }
 	        }
         }
@@ -152,7 +152,7 @@ public class MessageEvents implements Listener {
         if (print != null) {
 	        for (WebSocket socket : SocketListener.activeSessions.keySet()) {
 	            if (socket.isOpen()) {
-	            	socket.send(String.format("print.message=%s", print.replaceAll("ยง", "&")));
+	            	socket.send(String.format("print.message=%s", print.replaceAll("ง", "&")));
 	            }
 	        }
         }

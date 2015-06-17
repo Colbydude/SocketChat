@@ -24,7 +24,7 @@ public class JoinLeavePackets {
     	
     	try {
     		isHidden = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).isHidden();
-    		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ยง", "&");
+    		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ง", "&");
         }
         catch (NullPointerException ex) {
         	isHidden = false;
@@ -50,7 +50,7 @@ public class JoinLeavePackets {
     	
     	try {
     		isHidden = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).isHidden();
-    		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ยง", "&");
+    		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ง", "&");
         }
         catch (NullPointerException ex) {
         	isHidden = false;

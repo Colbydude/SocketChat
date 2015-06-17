@@ -50,7 +50,7 @@ public class SocketListener extends WebSocketServer {
              * Send the player the message cache.
              */
             for (int i = MessageEvents.cachedMessages.size() - 1; i >= 0; i--) {
-                conn.send(String.format("chat.history=%s", MessageEvents.cachedMessages.get(i).replaceAll("ยง", "&")));
+                conn.send(String.format("chat.history=%s", MessageEvents.cachedMessages.get(i).replaceAll("ง", "&")));
             }
 
             /**
@@ -63,7 +63,7 @@ public class SocketListener extends WebSocketServer {
             	
             	try {
             		isHidden = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).isHidden();
-            		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ยง", "&");
+            		displayName = ((IEssentials) Bukkit.getPluginManager().getPlugin("Essentials")).getUser(username).getDisplayName().replaceAll("ง", "&");
                 }
                 catch (NullPointerException ex) {
                 	isHidden = false;

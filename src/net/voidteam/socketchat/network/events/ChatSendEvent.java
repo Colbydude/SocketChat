@@ -101,7 +101,7 @@ public class ChatSendEvent extends iEvent {
                 public void run() {
                     for (WebSocket socket : SocketListener.activeSessions.keySet()) {
                         if (socket.isOpen()) {
-                            socket.send(String.format("chat.receive=%s", formattedMessage.replaceAll("ยง", "&")));
+                            socket.send(String.format("chat.receive=%s", formattedMessage.replaceAll("ง", "&")));
                         }
                     }
                 }
